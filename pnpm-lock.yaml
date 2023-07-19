@@ -1,10 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@headlessui/react': ^1.7.15
   '@planetscale/database': ^1.8.0
   '@react-spring/web': ^9.7.3
   '@t3-oss/env-nextjs': ^0.3.1
   '@tailwindcss/aspect-ratio': ^0.4.2
+  '@tailwindcss/forms': ^0.5.4
   '@tanstack/react-query': ^4.29.7
   '@trpc/client': ^10.26.0
   '@trpc/next': ^10.26.0
@@ -22,6 +24,8 @@ specifiers:
   drizzle-orm: ^0.27.2
   eslint: ^8.40.0
   eslint-config-next: ^13.4.2
+  jotai: ^2.2.2
+  lucide-react: ^0.261.0
   mysql2: ^3.5.2
   next: ^13.4.2
   pg: ^8.11.1
@@ -36,16 +40,20 @@ specifiers:
   zod: ^3.21.4
 
 dependencies:
+  '@headlessui/react': 1.7.15_biqbaboplfbrettd7655fr4n2y
   '@planetscale/database': 1.8.0
   '@react-spring/web': 9.7.3_biqbaboplfbrettd7655fr4n2y
   '@t3-oss/env-nextjs': 0.3.1_zno6rcmvi3mruj4xg7lanqhjom
   '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.3.3
+  '@tailwindcss/forms': 0.5.4_tailwindcss@3.3.3
   '@tanstack/react-query': 4.29.25_biqbaboplfbrettd7655fr4n2y
   '@trpc/client': 10.34.0_@trpc+server@10.34.0
   '@trpc/next': 10.34.0_nwdxavlypbnphlhght3cvb3ntq
   '@trpc/react-query': 10.34.0_gz4qcx26li3hkyaunqfr6neamy
   '@trpc/server': 10.34.0
   drizzle-orm: 0.27.2_awxu336uf4g57tptydgda2sgye
+  jotai: 2.2.2_react@18.2.0
+  lucide-react: 0.261.0_react@18.2.0
   mysql2: 3.5.2
   next: 13.4.10_biqbaboplfbrettd7655fr4n2y
   pg: 8.11.1
@@ -541,6 +549,18 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
+  /@headlessui/react/1.7.15_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-OTO0XtoRQ6JPB1cKNFYBZv2Q0JMqMGNhYP1CjPvcJvjz8YGokz8oAj89HIYZGN0gZzn/4kk9iUpmMF4Q21Gsqw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: 0.0.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /@humanwhocodes/config-array/0.11.10:
     resolution: {integrity: sha512-KVVjQmNUepDVGXNuoRRdmmEjruj0KfiGSbS8LVc12LMsWDQzRXJ0qdhN8L8uUigKpfEHRhlaQFY0ib1tnUbNeQ==}
     engines: {node: '>=10.10.0'}
@@ -799,6 +819,15 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
+      tailwindcss: 3.3.3
+    dev: false
+
+  /@tailwindcss/forms/0.5.4_tailwindcss@3.3.3:
+    resolution: {integrity: sha512-YAm12D3R7/9Mh4jFbYSMnsd6jG++8KxogWgqs7hbdo/86aWjjlIEvL7+QYdVELmAI0InXTpZqFIg5e7aDVWI2Q==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
       tailwindcss: 3.3.3
     dev: false
 
@@ -2725,6 +2754,18 @@ packages:
     resolution: {integrity: sha512-oVhqoRDaBXf7sjkll95LHVS6Myyyb1zaunVwk4Z0+WPSW4gjS0pl01zYKHScTuyEhQsFxV5L4DR5r+YqSyqyyg==}
     hasBin: true
 
+  /jotai/2.2.2_react@18.2.0:
+    resolution: {integrity: sha512-Cn8hnBg1sc5ppFwEgVGTfMR5WSM0hbAasd/bdAwIwTaum0j3OUPqBSC4tyk3jtB95vicML+RRWgKFOn6gtfN0A==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      react: '>=17.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -2842,6 +2883,14 @@ packages:
       es5-ext: 0.10.62
     dev: true
 
+  /lucide-react/0.261.0_react@18.2.0:
+    resolution: {integrity: sha512-gzxEvIxf8+hGbm2ZQU/VP5TxTcnTu3ODDmYoS3a53wC4gkW9ukxmexKjTcZUzz3q8ema+DMwmPypx9Z0Bvvxog==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /memoizee/0.4.15:
     resolution: {integrity: sha512-UBWmJpLZd5STPm7PMUlOw/TSy972M+z8gcyQ5veOnSDRREz/0bmpyTfKt3/51DhEBqCZQn1udM/5flcSPYhkdQ==}
     dependencies:
@@ -2879,6 +2928,11 @@ packages:
     resolution: {integrity: sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==}
     engines: {node: '>=12'}
     dev: true
+
+  /mini-svg-data-uri/1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
+    dev: false
 
   /minimatch/3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
